@@ -1,0 +1,11 @@
+
+#timer {
+    text-align: right;
+    padding: 20px 35px;
+    height: 190px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    position: static;
+    top: 0;
+}
