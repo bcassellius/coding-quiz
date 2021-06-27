@@ -17,17 +17,29 @@
         </div>    
     </header>
     <main> 
+        <div class="btn begin">
+            <button id="start">Start Quiz</button>
+        </div>
+        <form id='high-score-form'>
+            <h3>You're Finished!</h3> 
+            <br>
+            <p id="urscore">
+                Your final score is
+            </p>
+            <input type="text"></form>
+            <button id="submit">Submit Score </button>
+        </form>
+
         <!-- Quiz -->
-        <div class="questionContainer">
-            <h3 id="question">Print the Directions</h3>
+        <div id="questionContainer">
+            <h3 id="question">Try to answer the following code-related questions within <br> 
+                the time limit. Keep in mind that incorrect answers will <br>
+                penalize your score/time by ten seconds!</h3>
             <div id="answer-btn" class= "btn btn-grid">
-                <button class="choice"></button>
-                <button class="choice"></button>
-                <button class="choice"></button>
-                <button class="choice"></button>
-            </div>
-            <div class="btn begin">
-                <button id="start">Start Quiz</button>
+                <button class="choice" id="choice-0"></button>
+                <button class="choice" id="choice-1"></button>
+                <button class="choice" id="choice-2"></button>
+                <button class="choice" id="choice-3"></button>
             </div>
         </div>
     </main>
@@ -35,6 +47,7 @@
 
     </footer>
 <script src="./assets/script.js"></script>
+<!-- <script src="./assets/scriptWithPaul.js"></script> -->
 </body>
 </html>
 
