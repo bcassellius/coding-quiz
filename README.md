@@ -4,6 +4,7 @@
 Website application that tests user knowledge on coding.
 
 ## Built With
+CSS
 JavaScript
 
 ## Website URL
