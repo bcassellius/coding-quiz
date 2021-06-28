@@ -4,8 +4,8 @@
 Website application that tests user knowledge on coding.
 
 ## Built With
-CSS
-JavaScript
+- CSS
+- JavaScript
 
 ## Website URL
 https://bcassellius.github.io/coding-quiz/
