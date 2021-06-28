@@ -7,7 +7,8 @@
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
-:root{
+/* did not get back to styling yet */
+/* :root{
     --hue-neutral: papayawhip;
     --hue-wrong: rgb(100, 0, 0);
     --hue-correct: rgb(0, 100, 0);
@@ -19,7 +20,7 @@ body.correct{
 
 body.wrong{
     --hue:var(--hue-wrong);
-}
+} */
 
 
 #start {
@@ -32,7 +33,7 @@ body.wrong{
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 10px, 20px;
+    padding: 10px;
 }
 
 
@@ -79,6 +80,8 @@ body.wrong{
     border-color: black;
 }
 
+/* did not get back to this styling yet */
+/* 
 .choice.correct {
     --hue:var(--hue-correct);
     color: white;
@@ -87,7 +90,7 @@ body.wrong{
 .choice.wrong {
     --hue:var(--hue-wrong);
     color: white;
-}
+} */
 
 .hide {
     display: none;

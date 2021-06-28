@@ -12,15 +12,14 @@ var $questionContainer = document.getElementById("questionContainer");
 var optionsEl= document.getElementsByClassName("choice"); // returns an array of elements
 var $answerbtn = document.getElementById("answer-btn")
 var $submit = document.getElementById("submit")
+var timeLeft = 75;
 
 let currentQuestionIndex 
 let ansCorrect = 0
-let finalScore = parseInt(ansCorrect) + (timeLeft)
 
 $startButton.addEventListener("click", startQuiz);
 $startButton.onclick=startTimer;
 
-var timeLeft = 75;
 
 function startTimer(){
     timeLeft = 75;
@@ -31,10 +30,10 @@ function startTimer(){
         if (timeLeft <= 0) {
             clearTimeout(timerId);
             endQuiz();
-
+            
         } else {
             elem.innerHTML = "Time: " + timeLeft ;
-            timeLeft--;
+            timeLeft--
         }    
     }      
 }    
@@ -52,40 +51,41 @@ function displayNextQuestion(){
 
 function endQuiz(){
     $answerbtn.classList.add('hide')
-    $highScoreForm.classList.remove('hide')
-    $startButton.classList.add('hide')
     $questionContainer.classList.add('hide')
+    $highScoreForm.classList.remove('hide')
     $submit.classList.remove('hide')
     alert('we made it to the finish line')
-
+    
+    let finalScore = parseInt(ansCorrect) + (timeLeft)
     alert( 'Your final score is ' + finalScore);
     var urscore = document.getElementById('urscore');
     urscore.innerHTML = 'Your Final Score is ' + finalScore ;
-    saveScores()
+    // save score to localStorate
+    localStorage.setItem("finalScore", JSON.stringify(urscore.textContent, finalScore));
     displayHighScores()
-    
 }
 
 function displayHighScores(){
-    document.getElementById("submit").onclick=function(){
-        var winner = parseInt("urscore");
-        location.href = "./high-scores.html";
-    // put the object into local storage
-    // localStorage.setItem('highScores', JSON.stringify(highScores));
-
+    document.getElementById("submit").onclick = function(){
+        location.href = "./high-scores.html"
     }
-}
-var saveScores = function() {
-    localStorage.setItem("finalScore", JSON.stringify(finalScore));
-}
-
-function startQuiz(){
-    console.log('start quiz was started')
-    $startButton.classList.add('hide');
-    $answerbtn.classList.remove('hide')
-    currentQuestionIndex = 0;
-    displayNextQuestion();
-    console.log(question);
+    // $submit.addEventListener('click', function(){location.href = "./high-scores.html"})
+    // // $submit.onclick=function(){
+        //     //     location.href = "./high-scores.html";
+        
+        //     $submit.onclick=function(){
+            //         location.href = "./high-scores.html";
+            // }
+            console.log('I broke it! It was going to the high score page but now it is not. Argh!')
+        }
+        
+        function startQuiz(){
+            $startButton.classList.add('hide')
+            $answerbtn.classList.remove('hide')
+            console.log('start quiz was started')
+            currentQuestionIndex = 0;
+            displayNextQuestion();
+    // console.log(question);
     
 }
 
@@ -104,17 +104,15 @@ function showQuestion(question){
 
 function handleAnswerSubmission(e) {
     e.preventDefault();
-    console.log(e.target.dataset.correct);
+    // console.log(e.target.dataset.correct);
     let button = e.target
     if (e.target.dataset.correct === e.target.textContent) {
         ansCorrect = ansCorrect + 1
         //correct
         // add a point to score
-        // button.classList.add(".correct")
         alert('you did it!')
     } else {
         // wrong
-        // button.classList.add(".wrong")
         timeLeft = timeLeft - 10;
         alert('wrong')
     }
@@ -128,7 +126,7 @@ answers: ["hamsterWheel", "hamster", "bulldozer", "love"],
 correctAnswer: 'hamster'  
 },
 { question: "This is question 2!" , 
-answers: ["chicken", "cheese", "cherries"],
+answers: ["chicken", "cheese", "cherries", "chocolate"],
 correctAnswer: "cheese"
 },
 { question: "This is question 3!" , 
