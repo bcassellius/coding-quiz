@@ -121,46 +121,46 @@ function handleAnswerSubmission(e) {
 }
 
 var questions = [
-{ question: "This is question 1!" , 
-answers: ["hamsterWheel", "hamster", "bulldozer", "love"],
-correctAnswer: 'hamster'  
-},
-{ question: "This is question 2!" , 
-answers: ["chicken", "cheese", "cherries", "chocolate"],
-correctAnswer: "cheese"
-},
-{ question: "This is question 3!" , 
-answers: ["monopoly", "trouble", "jenga", "chutes and ladders"],
-correctAnswer: "jenga"
-},
-{ question: "This is question 4!" , 
-answers: ["choice1", "choice2", "choice3", "choice4"],
-correctAnswer: "choice1"  
-},
-{ question: "This is question 5!" , 
-answers: ["choice1", "choice2", "choice3", "choice4"],
-correctAnswer: "choice3"
-},
-{ question: "This is question 6!" , 
-answers: ["choice1", "choice2", "choice3", "choice4"],
-correctAnswer: "choice2"
-},
-{ question: "This is question 7!" , 
-answers: ["choice1", "choice2", "choice3", "choice4"],
-correctAnswer: "choice2"  
-},
-{ question: "This is question 8!" , 
-answers: ["choice1", "choice2", "choice3", "choice4"],
-correctAnswer: "choice0"
-},
-{ question: "This is question 9!" , 
-answers: ["choice1", "choice2", "choice3", "choice4"],
-correctAnswer: "choice2"
-},
-{ question: "This is question 10!" , 
-answers: ["choice1", "choice2", "choice3", "choice4"],
-correctAnswer: "choice0"  
-},]
+    { question: "What is coding?" , 
+    answers: ["communicating with a computer", "finding a winter coat", "learning about making a website", "moving through a computer without a mouse"],
+    correctAnswer: 'communicating with a computer'  
+    },
+    { question: "What can the terminal be used for?" , 
+    answers: ["creating files", "creating folders", "commit a repo", "all of these"],
+    correctAnswer: "all of these"
+    },
+    { question: "What language is used to structure a web page?" , 
+    answers: ["Javascript", "html", "css", "markdown"],
+    correctAnswer: "html"
+    },
+    { question: "What happens if your syntax is incorrect?" , 
+    answers: ["the code will load a virus to your computer", "the code will run backward", "the code will not compile", "the code will run just fine"],
+    correctAnswer: "the code will not compile"
+    },
+    { question: "what does an <a> tag do?" , 
+    answers: ["defines a hyperlink", "defines the first thing on the website", "defines the color of text", "allows you to write notes in your code"],
+    correctAnswer: "defines a hyperlink"  
+    },
+    { question: "How do you create an object?" , 
+    answers: ["curly braces", "new Object()", "both of them", "neither of them"],
+    correctAnswer: "both of them"
+    },
+    { question: "What is the DOM" , 
+    answers: ["Deleting Object Mechanisms", "Document Object Model", "the format for decorating wibsites", "directions to clone code"],
+    correctAnswer: "Document Object Model"
+    },
+    { question: "Where can you test code before deploying?" , 
+    answers: ["on Google", "in html documentation", "Developer Tools on a webpage", "in Visual Code"],
+    correctAnswer: "Developer Tools on a webpage"  
+    },
+    { question: "What is the name of a commonly used website that has pre-built css framework?" , 
+    answers: ["tailwind", "materialize", "bootstrap", "all of the above"],
+    correctAnswer: "all of the above"
+    },
+    { question: "In Javascript, what symbols do you use when you call a function?" , 
+    answers: ["." , "()" , "@" , "!"],
+    correctAnswer: "()"  
+    },]
 
 $choice0.addEventListener('click', handleAnswerSubmission);
 $choice1.addEventListener('click', handleAnswerSubmission);
